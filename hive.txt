@@ -1,0 +1,12 @@
+beeline
+!connect jdbc:hive2://localhost:10000
+export table tablename to '/user/jetty/tablename';
+
+
+hadoop fs -get /user/hadoop/file localfile
+hdfs dfs -put /home/hdfs/files/test.txt   /input  
+
+import from '/tmp/export/customer';
+import table ds_customer from '/tmp/export/customer';
+
+
